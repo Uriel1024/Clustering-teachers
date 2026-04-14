@@ -19,4 +19,10 @@ def extraer_profesores(ruta_pdf):
 
 # Uso
 lista = extraer_profesores("1.pdf")
+
+with open("nombres.txt", 'w', encoding= 'utf-8') as fichero:
+    for name in lista:
+        fichero.write(name + "\n")
+
 print(lista)
+
